@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Snake Loop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <div class="titlewrap">
+    <h1>Snake Loop</h1>
+    <div class="loopmark"><span class="dot"></span>wraps at the edge</div>
+  </div>
+
+  <div id="hud">
+    <div class="stat">
+      <span class="label">Score</span>
+      <span class="value" id="score">0</span>
+    </div>
+    <div class="stat best">
+      <span class="label">Best</span>
+      <span class="value" id="best">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Speed</span>
+      <span class="value" id="speedlvl">1</span>
+    </div>
+  </div>
+
+  <div id="board-wrap">
+    <canvas id="board" width="440" height="440" aria-label="Snake game board"></canvas>
+    <div id="overlay" class="show">
+      <h2 id="overlay-title">Snake Loop</h2>
+      <p id="overlay-text">Guide the snake to the gold squares. Run off one edge and you'll reappear on the other — no walls, just the loop.</p>
+      <div class="score-big" id="overlay-score" style="display:none;"></div>
+      <button class="primary" id="startBtn">Start game</button>
+    </div>
+  </div>
+
+  <div id="controls-hint">
+    move with <kbd>&uarr;</kbd><kbd>&darr;</kbd><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> &nbsp;·&nbsp; <kbd>space</kbd> to pause
+  </div>
+
+  <div id="dpad">
+    <button class="dbtn" id="up" aria-label="Up">&uarr;</button>
+    <button class="dbtn" id="left" aria-label="Left">&larr;</button>
+    <button class="dbtn" id="right" aria-label="Right">&rarr;</button>
+    <button class="dbtn" id="down" aria-label="Down">&darr;</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
